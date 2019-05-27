@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zdq.sm.mapper.UserMapper">
+<resultMap type="com.zdq.sm.model.User" id="userMap">
+<id property="id" column="id"/>
+<result property="name" column="name"/>
+<result property="password" column="password"/>
+<result property="headImg" column="head_img"/>
+<result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+<result property="email" column="eamil"/>
+</resultMap>
+
+<select id="selectUserById" resultMap="userMap">
+select *
+from sm_user
+where name=#{name} and password=#{password}
+</select>
+
+<insert id="insertUser">
+		<selectKey keyColumn="id" resultType="Long" keyProperty="id"  order="BEFORE">
+		SELECT SEQUENCE_NAME.nextval from dual
+		</selectKey>
+insert into sm_user(name,password)
+values(#{name},#{password})
+</insert>
+</mapper>

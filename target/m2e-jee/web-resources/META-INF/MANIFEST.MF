@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-Title: 
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: zdq
+Build-Jdk: 1.6.0_13
+Built-By: zdq
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://projects.spring.io/spring-boot/SM/
+
