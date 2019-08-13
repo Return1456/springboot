@@ -5,7 +5,7 @@
   
   <configuration>
 <settings>
-<setting name="logImpl" value="LOG4J"></setting>
+<setting name="logImpl" value="LOG4J"/>
 </settings>
 
 <typeAliases>
@@ -23,6 +23,7 @@
       </dataSource>
     </environment>
   </environments>
+
   <mappers>
     <mapper resource="com/zdq/sm/mapper/UserMapper.xml"/>
   </mappers>

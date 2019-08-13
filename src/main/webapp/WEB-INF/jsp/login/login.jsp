@@ -33,7 +33,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   }
   </script>
   <body>
-    
     <form action="usercheck" onsubmit="return check()" style="text-align:center" method="post">
         <br><br>    <br><br>
      <h1>Welcome!</h1>

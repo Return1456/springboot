@@ -23,4 +23,26 @@ where name=#{name} and password=#{password}
 insert into sm_user(name,password)
 values(#{name},#{password})
 </insert>
+
+
+	<select id="getAllUser" parameterType="map" resultType="map">
+		select *
+		from sm_user
+	</select>
+
+	<select id="getStart_Spot" parameterType="map" resultType="map">
+		select price
+		from flight
+	</select>
+
+	<select id="getEnd_Spot" parameterType="map" resultType="map">
+		select end_spot
+		from flight
+	</select>
+
+	<select id="getPie" parameterType="map" resultType="map">
+		select start_spot name,price value
+		from flight
+	</select>
+
 </mapper>
